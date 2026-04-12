@@ -24,18 +24,18 @@ module = "errortools"
 author = "more_abc"
 
 # Generate formatted name
-print(generate_name(module, author))
+print(na.generate_name(module, author))
 # errortools by more_abc
 
 # Generate URL-safe slug
-print(generate_slug(module, author))
+print(na.generate_slug(module, author))
 # errortools-by-more-abc
 
 # Generate short unique hash signature
-print(generate_signature(module, author))
+print(na.generate_signature(module, author))
 # 7f16a8b2c7e8d910
 
 # Generate full unique ID
-print(generate_id(module, author))
+print(na.generate_id(module, author))
 # errortools-by-more-abc-7f16a8b2
 ```

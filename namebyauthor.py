@@ -8,7 +8,7 @@ import hashlib
 import unicodedata
 import unittest
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 __all__ = [
     "generate_name",
