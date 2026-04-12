@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "namebyauthor"
+version = "1.0.0"
+authors = [
+  { name = "aiwonderland", email = "quantbit@126.com" }
+]
+description = "Tiny zero-dependency utility to generate names, slugs, and signatures from name + author"
+keywords = ["name", "slug", "signature", "utility", "stdlib-style"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Python Software Foundation License",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+]
+requires-python = ">=3.0"
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/more-abc/namebyauthor"
