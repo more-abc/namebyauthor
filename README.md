@@ -39,3 +39,16 @@ print(na.generate_signature(module, author))
 print(na.generate_id(module, author))
 # errortools-by-more-abc-7f16a8b2
 ```
+```
+# metadatas
+import namebyauthor as na  
+
+__license__: str = "MIT"
+__title__: str = "namebyauthor"
+__url__: str = "https://github.com/more-abc/namebyauthor"
+
+__fullname__ = na.generate_name(__title__, __author__)
+__slug__ = na.generate_slug(__title__, __author__)
+__signature__ = na.generate_signature(__title__, __author__)
+__uid__ = na.generate_id(__title__, __author__)
+```
