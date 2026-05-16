@@ -39,7 +39,7 @@ print(na.generate_signature(module, author))
 print(na.generate_id(module, author))
 # errortools-by-more-abc-7f16a8b2
 ```
-```
+```python
 # metadatas
 import namebyauthor as na  
 
