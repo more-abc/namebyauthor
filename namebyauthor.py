@@ -8,7 +8,7 @@ import hashlib
 import unicodedata
 import unittest
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 __all__ = [
     "generate_name",
@@ -18,7 +18,7 @@ __all__ = [
 ]
 
 
-def generate_name(module_name, author_name):
+def generate_name(module_name: str, author_name: str) -> str:
     """
     Generate a formal, normalized name like "module by author".
 
@@ -34,7 +34,7 @@ def generate_name(module_name, author_name):
     return f"{module} by {author}"
 
 
-def generate_slug(module_name, author_name):
+def generate_slug(module_name: str, author_name: str) -> str:
     """
     Generate a URL-safe lowercase slug: module-by-author.
     """
@@ -43,11 +43,11 @@ def generate_slug(module_name, author_name):
 
 
 def generate_signature(
-    module_name,
-    author_name,
+    module_name: str,
+    author_name: str,
     *,
-    length=16
-):
+    length: int=16
+) -> str:
     """
     Generate a short unique signature (stable hash) from module + author.
     """
@@ -56,7 +56,7 @@ def generate_signature(
     return sha.hexdigest()[:length]
 
 
-def generate_id(module_name, author_name):
+def generate_id(module_name: str, author_name: str) -> str:
     """
     Generate a full unique ID: slug-signature.
     """
@@ -69,11 +69,11 @@ def generate_id(module_name, author_name):
 # Internal helpers (tiny & stable)
 # ------------------------------
 
-def _clean(s):
+def _clean(s: str) -> str:
     return " ".join(s.strip().split())
 
 
-def _slugify(s):
+def _slugify(s: str):
     s = unicodedata.normalize("NFKD", s)
     s = s.encode("ascii", "ignore").decode("ascii")
     s = s.lower()
